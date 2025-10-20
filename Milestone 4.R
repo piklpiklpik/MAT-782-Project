@@ -11,7 +11,11 @@ sets2 <- subset(sets1, subset = !no_pieces)
 
 #Now we want to set any minifigure count of NA to 0 as these will mess with minifigure analysis
 sets2$Minifigures[is.na(sets2$Minifigures)] <- 0
-sets_clean <- sets2
+
+#remove the data without a USD_MSRP
+no_price <- is.na(sets2$USD_MSRP)
+sets3 <- subset(sets2, subset = !no_price)
+sets_clean <- sets3
 
 #for further use and cleaning we will create a subset with only the rows with a positive number of Minifigures
 sets_clean_minifigures <- subset(sets_clean, Minifigures > 0)
