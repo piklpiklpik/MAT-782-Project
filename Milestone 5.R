@@ -23,3 +23,15 @@ sd(sets_clean$Minifigures)
 # median = 1
 # variance = 5.591642
 # sd = 2.364665
+
+#Price
+mean(sets_clean$USD_MSRP)
+mean(sets_clean$USD_MSRP, trim = 0.05)
+median(sets_clean$USD_MSRP)
+var(sets_clean$USD_MSRP)
+sd(sets_clean$USD_MSRP)
+# mean  = 43.02793
+# trimmed mean = 34.63584
+# median = 24.99
+# variance = 3270.735
+# sd = 57.19034
